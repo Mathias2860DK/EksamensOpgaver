@@ -1,28 +1,39 @@
 package Bank;
 
-public class BankAccount {
-    private String navn;
-    private double tilgængeligPenge;
-    private int bankID;
+public class BankAccount implements Comparable<BankAccount> {
+    int saldo;
+    String name;
 
-    public BankAccount() {
+    public BankAccount(int saldo, String name) {
+        this.saldo = saldo;
+        this.name = name;
+    }
+    public BankAccount (){
+
+    }
+    public int getSaldo(){
+        return saldo;
     }
 
-    public BankAccount(String navn, double tilgængeligPenge, int bankID) {
-        this.navn = navn;
-        this.tilgængeligPenge = tilgængeligPenge;
-        this.bankID = bankID;
+    public int insertMoney(int penge){
+        int nySaldo = saldo + penge;
+
+        return nySaldo;
     }
 
-    public int getBankID() {
-        return bankID;
+    public void indsætTilSaldo(int indtsætPenge) {
+
+        this.saldo = saldo + indtsætPenge;
     }
 
-    public double getTilgængeligPenge() {
-        return tilgængeligPenge;
+    @Override
+    public String toString(){
+        return "name: " + name + " saldo: " + saldo + "\n";
     }
 
-    public void setTilgængeligPenge(double tilgængeligPenge) {
-        this.tilgængeligPenge = tilgængeligPenge;
+
+    @Override
+    public int compareTo(BankAccount o) {
+        return (this.saldo - o.getSaldo());
     }
 }

@@ -19,7 +19,6 @@ Ork ork = new Ork();
             return retVal;
         }
 
-
     public void winner (int [] kæmperne){
 
     }
