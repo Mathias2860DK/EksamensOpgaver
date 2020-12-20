@@ -9,7 +9,7 @@ public class Bank {
  BankAccount bankAccount = new BankAccount();
  List <BankAccount> bankAccounts = new ArrayList<BankAccount>();
 
-
+//test
  public Bank (String name){
      this.name = name;
  }
