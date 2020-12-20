@@ -1,5 +1,6 @@
 package Bank;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
 public class BankAccount implements Comparable<BankAccount> {
@@ -22,6 +23,16 @@ public class BankAccount implements Comparable<BankAccount> {
 
         return nySaldo;
     }
+
+    public void indsætTilSaldoSenere(int indsætPenge, LocalDate datoForIndsæt) {
+        LocalDate aktieUdbytte = LocalDate.now().plusMonths(1);
+        System.out.println(aktieUdbytte);
+        if (aktieUdbytte.isAfter(datoForIndsæt)) {
+            indsætPenge = (int) (indsætPenge * 1.10);
+            saldo = saldo + indsætPenge;
+        }
+    }
+
 
     public void indsætTilSaldo(int indtsætPenge) {
 
