@@ -1,0 +1,5 @@
+int number, String make, String model, String price, int cylinders, int horsePower
+1;Acura;MDX;$36.945;4;200
+2;Audi;A8;$80.000;10;320
+3;BMW;X5;$100.000;8;450
+4;BMW;i8;$200.000;8;500
