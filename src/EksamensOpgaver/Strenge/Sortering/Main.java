@@ -24,7 +24,8 @@ for (int i = 0; i < retVal.length; i++){
     }
 
     public void sortArray (String[] fiveStrings){
+        System.out.println("før det er sorted alfabetisk: " + Arrays.toString(fiveStrings));
         Arrays.sort(fiveStrings);
-        System.out.println(Arrays.toString(fiveStrings));
+        System.out.println("Efter sortering: " + Arrays.toString(fiveStrings));
     }
 }
