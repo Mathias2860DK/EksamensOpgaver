@@ -1,28 +1,32 @@
-package Biler;
+package Bil2;
+
+
+import Bil2.Bil;
+import Bil2.Main;
+import Bil2.Bil;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ImportData {
 
-    public ArrayList <Bil> importBiler(){
-        String pathToCsv = "src/Biler/biler2.csv";
+    public ArrayList<Bil> importBiler(){
+        String pathToCsv = "src/Bil2/biler2.csv";
         String csvSplitBy = ";";
         ArrayList <Bil> bilArrayList = new ArrayList<>();
 
         try  {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(pathToCsv));
             String line = "";
-            line = bufferedReader.readLine(); //spiser første linje (headline) tager den ind uden at gøre noget med den
+            line = bufferedReader.readLine();
             while ((line = bufferedReader.readLine()) != null){
                 String [] opdeler = line.split(csvSplitBy);
 
-                //int number, String make, String model, String price, int cylinders, int horsePower
-               Bil bil = new Bil(Integer.parseInt(opdeler[0]), opdeler[1], opdeler[2], Integer.parseInt(opdeler[3]),Integer.parseInt(opdeler[4]), Integer.parseInt(opdeler[5]));
+                //int number, String make, String model, int cylinders, int horsePower, int length
+                Bil bil = new Bil(Integer.parseInt(opdeler[0]), opdeler[1], opdeler[2], Integer.parseInt(opdeler[3]),Integer.parseInt(opdeler[4]), Integer.parseInt(opdeler[5]));
                 bilArrayList.add(bil);
             }
 
@@ -32,7 +36,11 @@ public class ImportData {
         } catch (IOException e) {
             e.printStackTrace();
         }
-return bilArrayList;
+        return bilArrayList;
 
     }
+
+
 }
+
+

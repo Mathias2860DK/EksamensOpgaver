@@ -6,11 +6,11 @@ public class Bil {
     int number;
     String make;
     String model;
-    String price; //Står i dollars, derfor er det en String
+    int price; //Står i dollars, derfor er det en String
     int cylinders;
     int horsePower;
 
-    public Bil(int number, String make, String model, String price, int cylinders, int horsePower) {
+    public Bil(int number, String make, String model, int price, int cylinders, int horsePower) {
         this.number = number;
         this.make = make;
         this.model = model;
@@ -33,4 +33,5 @@ public class Bil {
                 cylinders + ", " +
                 horsePower + "\n";
     }
+
 }

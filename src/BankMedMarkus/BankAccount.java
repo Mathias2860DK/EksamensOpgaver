@@ -42,8 +42,10 @@ public class BankAccount implements Comparable <BankAccount> {
         return Double.compare(this.saldo,o.saldo);
     }
 
+
     public String toString(){
         return name + ", saldo: " + saldo + " DKK";
     }
+
 
 }

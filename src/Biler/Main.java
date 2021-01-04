@@ -10,6 +10,10 @@ public class Main {
         //System.out.println(importedBiler);
         Garage garage = new Garage();
         //garage.printGarage();
+
+      /*  for (Bil bil: importedBiler) {
+            garage.addCarsToGarage(bil);
+        }*/
         garage.addCarsToGarage(importedBiler.get(0));
         garage.addCarsToGarage(importedBiler.get(1));
         garage.addCarsToGarage(importedBiler.get(2));
